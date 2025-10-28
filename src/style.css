@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 10px 7px;
+  border: 2px;
+  background-color: rgb(5, 1, 15);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 10rem; 
+  text-align: center;
+  font-size: larger;
+  font-weight: 600;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+/* Target the actual links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+   padding: 8px 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #bd306b;
+  color: rgb(2, 0, 7);
+}
+
+.Myimage{
+    
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
