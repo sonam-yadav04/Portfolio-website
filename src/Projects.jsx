@@ -1,6 +1,7 @@
 // src/components/Projects.jsx
 import React from 'react';
-import { Github } from 'lucide-react';
+import { Github ,ChevronLeft,ChevronRight} from 'lucide-react';
+
 
 const projects = [
   {
@@ -61,6 +62,7 @@ export default function Projects() {
               </div>
             ))}
           </div>
+        
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import React from 'react';
-import { Code, Database, Wrench } from 'lucide-react';
+import { Code, Database, Wrench,ChevronRight } from 'lucide-react';
 
 const skills = {
   languages: ['Python', 'JavaScript', 'SQL', 'HTML', 'CSS'],
@@ -64,7 +64,11 @@ export default function Skills() {
               </div>
             </div>
           </div>
+          <div className="scroll-indicator">
+                          <ChevronRight size={32} />
+                        </div>
         </div>
+        
       </section>
 
   );

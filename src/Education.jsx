@@ -1,4 +1,5 @@
 import React from "react"
+
 export default function Education(){
 
  return (
@@ -29,6 +30,7 @@ export default function Education(){
               </div>
             </div>
           </div>
+         
         </div>
       </section>
 );

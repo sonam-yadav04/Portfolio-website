@@ -1,10 +1,8 @@
 import React from 'react'
-import {Link,useNavigate} from 'react-router-dom'
 
-function About(){
 
-const navigate = useNavigate()
-
+function  About(){
+ 
 
     return(
         <div>
@@ -19,9 +17,15 @@ const navigate = useNavigate()
               I'm passionate about clean code, efficient algorithms, and creating solutions that make a real impact. Currently seeking opportunities to contribute to innovative projects as a Python Full Stack Developer.
             </p>
           </div>
+          
         </div>
+        
       </section>
+       
+      
+      
      </div>
+     
 
     );
 }

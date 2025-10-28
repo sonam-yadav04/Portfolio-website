@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+
 import { Github, Linkedin,Code2, Mail, Phone, MapPin, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 
 function Home() {
-  const navigate = useNavigate();
+
 
   return (
      
@@ -38,10 +38,7 @@ function Home() {
                   <MapPin size={18} /><span>Bengaluru & Indore</span>
                 </div>
               </div>
-    
-              <div className="scroll-indicator">
-                <ChevronRight size={32} />
-              </div>
+              
             </div>
           </section>
     

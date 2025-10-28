@@ -1,9 +1,8 @@
 import React from 'react'
-import {Link,useNavigate} from 'react-router-dom'
+
 
 function Contact(){
 
-const navigate = useNavigate()
 
 
     return(
@@ -24,7 +23,9 @@ const navigate = useNavigate()
           </div>
         </div>
       </section>
+      
      </div>
+     
 
     );
 }
