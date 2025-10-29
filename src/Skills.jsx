@@ -64,9 +64,7 @@ export default function Skills() {
               </div>
             </div>
           </div>
-          <div className="scroll-indicator">
-                          <ChevronRight size={32} />
-                        </div>
+         
         </div>
         
       </section>
