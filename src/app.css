@@ -199,7 +199,8 @@ body {
 .section-content {
   font-family: Georgia, 'Times New Roman', Times, serif;
   max-width: 1200px;
-  margin:  7rem 7rem 3rem 2rem ;
+  margin:  7rem auto 3rem ;
+  padding: 0, 1rem;
   width: 100%;
 }
 
@@ -347,9 +348,8 @@ body {
   position: relative;
   margin-bottom: 3rem;
   padding-left: 2rem;
-  background-color: #f8f9fa;
+  background-color: white;
   border-radius: 5%;
-  object-fit: cover;
 }
 
 .experience-item::before {
@@ -366,7 +366,6 @@ body {
 }
 
 .experience-item h3 {
-  
   color: #151515;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
@@ -379,7 +378,6 @@ body {
 }
 
 .experience-description {
-  
   color: #545353;
   line-height: 1.8;
 }
