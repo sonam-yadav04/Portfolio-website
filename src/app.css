@@ -199,12 +199,13 @@ body {
 .section-content {
   font-family: Georgia, 'Times New Roman', Times, serif;
   max-width: 1200px;
-  margin: 0 auto;
+  margin:  7rem 7rem 3rem 2rem ;
   width: 100%;
 }
 
 .section-title {
   font-size: 2.5rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
   text-align: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -346,6 +347,9 @@ body {
   position: relative;
   margin-bottom: 3rem;
   padding-left: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 5%;
+  object-fit: cover;
 }
 
 .experience-item::before {
@@ -362,6 +366,7 @@ body {
 }
 
 .experience-item h3 {
+  
   color: #151515;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
@@ -374,6 +379,7 @@ body {
 }
 
 .experience-description {
+  
   color: #545353;
   line-height: 1.8;
 }
@@ -482,7 +488,7 @@ body {
 
   .section-title {
     font-size: 1.8rem;
-    margin-top: 5rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
   }
 
@@ -517,7 +523,7 @@ body {
 /* ============================================
    MOBILE RESPONSIVE (max-width: 480px)
    ============================================ */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
   .nav {
     padding: 0.5rem 0;
   }
@@ -571,12 +577,12 @@ body {
   }
 
   .section {
-    padding: 3rem 1rem;
+    padding: 6rem 1rem;
   }
 
   .section-title {
     font-size: 1.5rem;
-   
+    margin-top: 4rem;
     margin-bottom: 1.5rem;
   }
 
@@ -642,7 +648,7 @@ body {
 /* ============================================
    EXTRA SMALL MOBILE (max-width: 375px)
    ============================================ */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
   .hero h1 {
     font-size: 1.4rem;
   }
