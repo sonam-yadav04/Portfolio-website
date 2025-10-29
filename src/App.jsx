@@ -20,7 +20,8 @@ export default function App() {
          
           <div className="nav-logo"><i>Sy</i></div>
           <div className="nav-avatar">
-  <img src="public\profile photo.png" alt="Sonam Yadav" />
+  <img src={`${import.meta.env.BASE_URL}profile photo.png`} alt="Profile" />
+ 
 </div>
           <ul className="nav-links">
               <li><Link to="/">Home</Link></li>
