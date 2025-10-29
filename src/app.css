@@ -439,10 +439,7 @@ body {
    TABLET RESPONSIVE (max-width: 768px)
    ============================================ */
 @media screen and (max-width: 768px) {
-  .nav{
-     overflow: auto;
-    white-space: nowrap;
-  }
+  
   .nav-content {
     padding: 0.4rem 1rem;
     flex-direction: column;
@@ -538,7 +535,7 @@ body {
   .nav {
     padding: 0.5rem 0;
      overflow: auto;
-    white-space: nowrap;
+     white-space: nowrap;
   }
 
   .nav-content {
@@ -682,5 +679,7 @@ body {
 
   .nav-links {
     font-size: 0.7rem;
+     overflow: auto;
+    white-space: nowrap;
   }
 }
