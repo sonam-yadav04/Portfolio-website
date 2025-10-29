@@ -1,6 +1,6 @@
 // src/components/Skills.jsx
 import React from 'react';
-import { Code, Database, Wrench,ChevronRight } from 'lucide-react';
+import { Code, Database, Wrench } from 'lucide-react';
 
 const skills = {
   languages: ['Python', 'JavaScript', 'SQL', 'HTML', 'CSS'],
