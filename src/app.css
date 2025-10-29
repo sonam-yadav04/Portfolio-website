@@ -27,16 +27,19 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 0.5rem 0;
+  padding: auto 0;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .nav-content {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
+   overflow: auto;
+    white-space: nowrap;
 }
 
 .nav-avatar {
@@ -70,6 +73,8 @@ body {
   list-style: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 600;
+   overflow: auto;
+    white-space: nowrap;
 }
 
 .nav-link {
@@ -79,7 +84,9 @@ body {
   font-weight: 500;
   transition: color 0.3s;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.4rem;
+   overflow: auto;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -187,7 +194,7 @@ body {
 
 /* Sections */
 .section {
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   background: rgba(239, 236, 236, 0.936);
   width: 100%;
 }
@@ -206,7 +213,7 @@ body {
 
 .section-title {
   font-size: 2.5rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
   text-align: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -432,15 +439,22 @@ body {
    TABLET RESPONSIVE (max-width: 768px)
    ============================================ */
 @media screen and (max-width: 768px) {
+  .nav{
+     overflow: auto;
+    white-space: nowrap;
+  }
   .nav-content {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
     flex-direction: column;
     gap: 0.5rem;
+    overflow: auto;
+    white-space: nowrap;
   }
 
   .nav-avatar {
     width: 60px;
     height: 60px;
+   
   }
 
   .nav-logo {
@@ -450,16 +464,15 @@ body {
   .nav-links {
     gap: 1rem;
     font-size: 0.85rem;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
   .hero {
-    padding: 7rem 1.5rem 3rem;
+    padding: 5rem 1.5rem 3rem;
   }
 
   .hero h1 {
-      margin-top: 6rem;
+      margin-top: 5rem;
     font-size: 2rem;
   }
 
@@ -481,7 +494,7 @@ body {
   }
 
   .section {
-     padding: 15rem 7rem;
+     padding: 10rem 7rem;
   }
 
   .section-title {
@@ -524,10 +537,14 @@ body {
 @media screen and (max-width: 400px) {
   .nav {
     padding: 0.5rem 0;
+     overflow: auto;
+    white-space: nowrap;
   }
 
   .nav-content {
     padding: 0.5rem;
+     overflow: auto;
+    white-space: nowrap;
   }
 
   .nav-avatar {
@@ -575,7 +592,7 @@ body {
   }
 
   .section {
-    padding: 6rem 1rem;
+    padding: 5rem 1rem;
   }
 
   .section-title {
@@ -646,7 +663,7 @@ body {
 /* ============================================
    EXTRA SMALL MOBILE (max-width: 375px)
    ============================================ */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
   .hero h1 {
     font-size: 1.4rem;
   }
