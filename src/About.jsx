@@ -1,32 +1,43 @@
-import React from 'react'
+import React from 'react';
 
-
-function  About(){
- 
-
-    return(
-        <div>
-    <section id="about" className="section">
+function About() {
+  return (
+    <div>
+      <section id="about" className="section">
         <div className="section-content">
           <h2 className="section-title">About Me</h2>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', fontSize: '1.1rem', color: '#666' }}>
+
+          <div
+            style={{
+              maxWidth: '800px',
+              margin: '0 auto',
+              textAlign: 'center',
+              fontSize: '1.1rem',
+              color: '#666',
+            }}
+          >
             <p>
-              Motivated Computer Science postgraduate with a strong foundation in full stack development. I specialize in building scalable, secure applications using modern technologies. My experience spans across developing microservices architectures, implementing RESTful APIs, and creating responsive user interfaces.
+              I am a motivated Computer Science postgraduate focused on MERN stack
+              development, with hands-on experience in building scalable and secure web
+              applications using MongoDB, Express.js, ReactJS, and Node.js. I specialize
+              in developing RESTful APIs, backend services, and responsive user
+              interfaces for real-world applications.
             </p>
+
             <p style={{ marginTop: '1.5rem' }}>
-              I'm passionate about clean code, efficient algorithms, and creating solutions that make a real impact. Currently seeking opportunities to contribute to innovative projects as a Python Full Stack Developer.
+              I have experience working with microservices concepts, event-driven
+              systems, and implementing secure authentication using JWT.
+              Alongside my development skills, I use Python for Data Structures and
+              Algorithms to strengthen my problem-solving and logical thinking.
+              Currently, I am seeking opportunities as a MERN Stack Developer where I
+              can contribute to production-ready applications and grow as a software
+              engineer.
             </p>
           </div>
-          
         </div>
-        
       </section>
-       
-      
-      
-     </div>
-     
-
-    );
+    </div>
+  );
 }
+
 export default About;
