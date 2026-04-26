@@ -11,18 +11,13 @@ const projects = [
     github: 'https://github.com/sonam-yadav04/inventory-management-system',
     highlight: true,
   },
-  {
-    name: 'Snap-Vault',
-    tech: 'Python, Flask, ReactJS, HTML, CSS',
-    description: 'Secure file upload and download application with file validation, authentication, and user-friendly UI for efficient image management.',
-    github: '#',
-  },
-  {
-    name: 'MyPortfolio',
-    tech: 'Python, Flask, Jinja2, HTML, CSS',
-    description: 'Dynamic personal portfolio website showcasing skills, projects, and academic achievements using Flask backend with Jinja2 templating.',
-    github: 'https://github.com/sonam-yadav04/MyProtfolio',
-  },
+  
+   {
+  name: 'AI_JOURNAL_SYSTEM',
+  tech: 'Node.js, Express.js, MongoDB, React, Tailwind CSS, Prompt Engineering',
+  description: 'Developed a full-stack AI-powered journaling application that enables users to create, manage, and analyze personal journal entries. Implemented secure authentication and RESTful APIs using Express.js, with MongoDB for efficient data storage. Integrated prompt engineering techniques to generate intelligent insights, summaries, and mood analysis from user entries. Designed a responsive and user-friendly interface using React and Tailwind CSS, ensuring a seamless user experience across devices.',
+  github: 'https://github.com/sonam-yadav04/ai_journal_system',
+},
   {
     name: 'MyWeatherApp',
     tech: 'Python, Flask, OpenWeather API, JavaScript',
@@ -30,10 +25,12 @@ const projects = [
     github: 'https://github.com/sonam-yadav04/MyWeatherApp',
   },
   {
-    name: 'Rock-Paper-Scissors Game',
-    tech: 'JavaScript, HTML, CSS',
+    name: 'finance-dashboard',
+    tech: 'JavaScript, Reactjs,useReducer, useContext ,tailwind Css',
     description: 'Interactive game with dynamic UI, score tracking, and responsive design. Implemented using vanilla JavaScript with DOM manipulation.',
-    github: '#',
+    github: 'https://github.com/sonam-yadav04/finance-dashboard',
+    highlight:true,
+    live: 'https://finance-dashboard-8814ut1oy-sonam-yadav04s-projects.vercel.app/'
   },
   {
     name: 'BOOk FINDER APP',
@@ -41,6 +38,7 @@ const projects = [
     description: 'Book finder app where you can search and find any book from the world wide using the author name, the title of book , subject or isbn .',
     github: 'https://github.com/sonam-yadav04/BOOKS_FINDER',
     highlight: true,
+    live:'https://sonam-yadav04.github.io/BOOKS_FINDER/'
   },
 ];
 
@@ -58,6 +56,7 @@ export default function Projects() {
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
                   <Github size={18} />
                   <span>View on GitHub →</span>
+                  
                 </a>
               </div>
             ))}

@@ -11,7 +11,7 @@ export default function Experience() {
           <div className="experience-item">
             <h3>MERN Stack Intern</h3>
             <p className="experience-meta">
-              Navhim Healthcare • November 2025 – Present
+              Navhim Healthcare • November 2025 – January 2026
             </p>
             <p className="experience-description">
               Working on full stack web application development using the MERN stack.

@@ -33,6 +33,7 @@ const skills = {
 
   tools: [
     'Git',
+    'Github',
     'Postman',
     'VS Code',
     'twilio',
@@ -45,7 +46,10 @@ const skills = {
     'API Integration',
     'Event-Driven Architecture',
     'JWT Authentication',
-    'password hashing '
+    'password hashing ',
+    'Context API',
+    'Data Structures and Algorithms', 
+    
   ],
 };
 
