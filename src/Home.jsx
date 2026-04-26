@@ -13,7 +13,7 @@ function Home() {
     <section className="hero">
       <div className="hero-content">
         <h1>Sonam Yadav</h1>
-        <h2>MERN Stack Developer</h2>
+        <h2>Full Stack Developer || Software developer</h2>
 
         <p className="hero-description">
           Computer Science postgraduate focused on MERN stack development with hands-on
