@@ -1,17 +1,18 @@
+// src/components/Experience.jsx
 import React from "react";
 
 export default function Experience() {
   return (
     <section id="experience" className="section">
       <div className="section-content">
-        <h2 className="section-title">Experience & Training</h2>
+        <p className="section-eyebrow mono">// 03 experience</p>
+        <h2 className="section-title">Experience &amp; Training</h2>
 
         <div className="experience-timeline">
-
           <div className="experience-item">
             <h3>MERN Stack Intern</h3>
             <p className="experience-meta">
-              Navhim Healthcare • November 2025 – January 2026
+              Navhim Healthcare &middot; November 2025 &ndash; January 2026
             </p>
             <p className="experience-description">
               Working on full stack web application development using the MERN stack.
@@ -24,7 +25,7 @@ export default function Experience() {
           <div className="experience-item">
             <h3>Python Full Stack Development Intern</h3>
             <p className="experience-meta">
-              Disha Computer Institute, Indore • 2 Months
+              Disha Computer Institute, Indore &middot; 2 Months
             </p>
             <p className="experience-description">
               Worked on full stack web development by integrating Flask backend APIs
@@ -36,7 +37,7 @@ export default function Experience() {
           <div className="experience-item">
             <h3>Python for Data Science</h3>
             <p className="experience-meta">
-              M.Sc. Computer Science • 4th Semester Coursework
+              M.Sc. Computer Science &middot; 4th Semester Coursework
             </p>
             <p className="experience-description">
               Completed in-depth coursework on data analysis and visualization using
@@ -44,7 +45,6 @@ export default function Experience() {
               problem-solving skills through practical assignments and projects.
             </p>
           </div>
-
         </div>
       </div>
     </section>

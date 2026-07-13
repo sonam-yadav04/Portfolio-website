@@ -1,8 +1,8 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import { FileText } from 'lucide-react';
 
-
-import './app.css';
+import './style.css';
 import Experience from './Experience';
 import Education from './Education';
 import Contact from './Contact';
@@ -11,33 +11,51 @@ import Projects from './Projects';
 import About from './About';
 import Home from './Home';
 
+
+const RESUME_URL = "https://drive.google.com/file/d/1xP_V00TGCugylb2ZX_hPr_SH1-RHK2Cu/view?usp=sharing";
+
+const NAV_ITEMS = [
+  { to: '/', label: 'Home', end: true },
+  { to: '/about', label: 'About' },
+  { to: '/skills', label: 'Skills' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/experience', label: 'Experience' },
+  { to: '/education', label: 'Education' },
+  { to: '/contact', label: 'Contact' },
+];
+
 export default function App() {
   return (
     <div className="portfolio">
-
       <nav className="nav">
         <div className="nav-content">
-         
-          <div className="nav-logo"><i>Sy</i></div>
-          <div className="nav-avatar">
-  <img src={`${import.meta.env.BASE_URL}profile photo.png`} alt="Profile" />
- 
-</div>
+          <div className="nav-brand">
+            <div className="nav-avatar">
+              <img src={`${import.meta.env.BASE_URL}profile2.jpeg`} alt="Profile" />
+            </div>
+            <span className="nav-logo">Sonam <span>Yadav</span></span>
+          </div>
+
           <ul className="nav-links">
-              <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/experience">Experience</Link></li>
-            <li><Link to="/education">Education</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            {NAV_ITEMS.map(({ to, label, end }) => (
+              <li key={to}>
+                <NavLink
+                  to={to}
+                  end={end}
+                  className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
+
+          <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="resume-btn">
+            <FileText size={15} /> Resume
+          </a>
         </div>
       </nav>
 
-     
-        
-      
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

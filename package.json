@@ -1,9 +1,9 @@
 {
-  "name": "my-app",
+  "name": "portfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sonam-yadav04.github.io/Portfolio-website/", 
+  "homepage": "https://sonam-yadav04.github.io/Portfolio-website/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "lucide-react": "^0.562.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.3"

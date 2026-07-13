@@ -1,3 +1,4 @@
+// src/components/Home.jsx
 import React from 'react';
 import {
   Github,
@@ -5,15 +6,21 @@ import {
   Code2,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  FileText,
+  ArrowDown
 } from 'lucide-react';
+
+
+const RESUME_URL = "https://drive.google.com/file/d/1xP_V00TGCugylb2ZX_hPr_SH1-RHK2Cu/view?usp=sharing";
 
 function Home() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero-content">
+        <p className="section-eyebrow mono">// full stack developer</p>
         <h1>Sonam Yadav</h1>
-        <h2>Full Stack Developer || Software developer</h2>
+        <h2>Full Stack Developer || Software Developer</h2>
 
         <p className="hero-description">
           Computer Science postgraduate focused on MERN stack development with hands-on
@@ -21,6 +28,17 @@ function Home() {
           Express.js, ReactJS, and Node.js. Experienced in developing RESTful APIs,
           backend services, and responsive user interfaces.
         </p>
+
+        <div className="cta-row">
+          <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="btn-solid">
+            <FileText size={18} />
+            <span>View resume</span>
+          </a>
+          <a href="#projects" className="btn-outline">
+            <ArrowDown size={18} />
+            <span>See projects</span>
+          </a>
+        </div>
 
         <div className="contact-links">
           <a href="mailto:sonamyadav.ml@gmail.com" className="contact-link">
@@ -50,14 +68,16 @@ function Home() {
           </a>
 
           <a
-            href="https://leetcode.com/your-username"
+            href="https://leetcode.com/u/sonam_yadav4/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="contact-link"
           >
             <Code2 size={18} /><span>LeetCode</span>
           </a>
 
           <div className="contact-link">
-            <MapPin size={18} /><span>Bengaluru & Indore</span>
+            <MapPin size={18} /><span>Bengaluru &amp; Indore</span>
           </div>
         </div>
       </div>
