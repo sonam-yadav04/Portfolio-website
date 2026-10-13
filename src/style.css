@@ -1180,8 +1180,8 @@ body {
 }
 
 .exp-content-box {
-  background: linear-gradient(145deg, rgba(20, 28, 54, 0.72) 0%, rgba(10, 16, 32, 0.88) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(30, 20, 15, 0.78) 0%, rgba(18, 11, 8, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 2rem;
   border-radius: 16px;
   flex-grow: 1;
@@ -1193,7 +1193,7 @@ body {
 }
 
 .featured-exp .exp-content-box {
-  border-color: rgba(56, 189, 248, 0.35);
+  border-color: rgba(249, 115, 22, 0.45);
   box-shadow:
     0 16px 36px -6px rgba(0, 0, 0, 0.7),
     0 0 20px rgba(56, 189, 248, 0.15),
@@ -1201,7 +1201,7 @@ body {
 }
 
 .exp-content-box:hover {
-  border-color: rgba(56, 189, 248, 0.6);
+  border-color: rgba(249, 115, 22, 0.7);
   transform: translateX(6px) translateY(-3px);
   box-shadow:
     0 22px 45px -8px rgba(0, 0, 0, 0.75),
