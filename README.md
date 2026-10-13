@@ -1,16 +1,60 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live site: **[sonam-yadav04.github.io/Portfolio-website](https://sonam-yadav04.github.io/Portfolio-website/)**
 
-Currently, two official plugins are available:
+Personal portfolio for Sonam Yadav, a Full Stack & GenAI Developer. Built as a single-page React app with smooth-scroll section navigation, an interactive resume preview, and a filterable project showcase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Smooth-scroll navigation** with active-section highlighting (synced with the URL via `react-router-dom`)
+- **Interactive resume modal** — preview the resume inline (Google Drive embed) or download it directly
+- **Filterable project grid** — browse projects by category (GenAI & RAG, Microservices & Full Stack, Frontend & Web Apps) with a details modal for each
+- **One-click contact actions** — copy email to clipboard, quick links to GitHub, LinkedIn, and LeetCode
+- Sections: Home, About, Skills, Projects, Experience, Education, Contact
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 19** + **Vite 7**
+- **react-router-dom** for routing
+- **lucide-react** for icons
+- Deployed to GitHub Pages via `gh-pages`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run the dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## Project Structure
+
+```
+src/
+├── App.jsx          # Layout, nav, resume modal, footer
+├── Home.jsx          # Hero section + composes all page sections
+├── About.jsx
+├── Skills.jsx
+├── Projects.jsx       # Project data + filterable grid + details modal
+├── Experience.jsx
+├── Education.jsx
+├── Contact.jsx
+└── style.css
+```
+
+## Connect
+
+- **Email:** sonamyadav.ml@gmail.com
+- **GitHub:** [@sonam-yadav04](https://github.com/sonam-yadav04)
+- **LinkedIn:** [sonam-yadav-242149325](https://linkedin.com/in/sonam-yadav-242149325)
+- **LeetCode:** [sonam_yadav4](https://leetcode.com/u/sonam_yadav4/)
