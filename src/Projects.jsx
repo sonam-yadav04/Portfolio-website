@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import React, { useState } from 'react';
 import { Github, ExternalLink, Sparkles, Bot, Layers, ShieldCheck, BookOpen, Database, X, Eye } from 'lucide-react';
 
@@ -59,17 +58,7 @@ const projects = [
     highlight: true,
     badge: 'Live Web App'
   },
-  {
-    id: 'snap-vault',
-    name: 'Snap-Vault Media Storage',
-    category: 'microservices',
-    tech: 'Flask, Node.js, React, JWT Auth',
-    description: 'Secure image upload & download platform with strict backend MIME validation, payload sanitization, and JWT authentication.',
-    details: 'Enforces file type validation, access token verification, and secure image asset storage across React and Flask API layers.',
-    github: 'https://github.com/sonam-yadav04',
-    highlight: false,
-    badge: 'Security / Web'
-  },
+
   {
     id: 'finance-dashboard',
     name: 'Interactive Finance Dashboard',
@@ -96,7 +85,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section">
       <div className="section-content">
-        <p className="section-eyebrow mono">// 03 portfolio</p>
+        <p className="section-eyebrow mono"><Sparkles size={14} />Projects</p>
         <h2 className="section-title">Featured Projects</h2>
 
         <div className="project-tabs">
@@ -132,11 +121,11 @@ export default function Projects() {
               <div className="project-card-header">
                 <span className="project-badge mono">{project.badge}</span>
               </div>
-              
+
               <h3>{project.name}</h3>
               <p className="project-tech mono">{project.tech}</p>
               <p className="project-description">{project.description}</p>
-              
+
               <div className="project-card-footer">
                 <div className="project-links">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
@@ -151,8 +140,8 @@ export default function Projects() {
                   )}
                 </div>
 
-                <button 
-                  onClick={() => setSelectedProject(project)} 
+                <button
+                  onClick={() => setSelectedProject(project)}
                   className="project-detail-btn"
                   title="View Details"
                 >
@@ -190,19 +179,19 @@ export default function Projects() {
                   <p>{selectedProject.details}</p>
                 </div>
                 <div className="modal-actions">
-                  <a 
-                    href={selectedProject.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-solid btn-sm"
                   >
                     <Github size={16} /> View GitHub Repository
                   </a>
                   {selectedProject.live && (
-                    <a 
-                      href={selectedProject.live} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href={selectedProject.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="btn-secondary btn-sm"
                     >
                       <ExternalLink size={16} /> Launch Live Demo
@@ -216,4 +205,4 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+}

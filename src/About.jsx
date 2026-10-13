@@ -1,12 +1,12 @@
 // src/components/About.jsx
 import React from 'react';
-import { 
-  Bot, 
-  Cpu, 
-  Layout, 
-  ShieldCheck, 
-  FileText, 
-  Download, 
+import {
+  Bot,
+  Cpu,
+  Layout,
+  ShieldCheck,
+  FileText,
+  Download,
   Sparkles
 } from 'lucide-react';
 import { RESUME_URL } from './App';
@@ -15,7 +15,7 @@ function About({ onOpenResume }) {
   return (
     <section id="about" className="section">
       <div className="section-content">
-        <p className="section-eyebrow mono">// 01 about-me</p>
+        <p className="section-eyebrow mono"><Sparkles size={14} />about-me</p>
         <h2 className="section-title">About Me</h2>
 
         <div className="about-grid">
@@ -26,9 +26,9 @@ function About({ onOpenResume }) {
 
             <ul className="ats-highlights-list">
               <li><strong>AI &amp; RAG Systems:</strong> Integrated DeepSeek LLMs, Qdrant vector databases, and FAISS similarity search for automated SaaS chatbot &amp; Q&amp;A engines.</li>
-              <li><strong>Backend &amp; Microservices:</strong> Built high-throughput REST APIs using FastAPI, Flask, Node.js/Express, Redis queues, and Kafka event streams.</li>
-              <li><strong>Modern Frontend:</strong> Designed responsive admin dashboards and user interfaces using React, Next.js, Redux, and shadcn/ui.</li>
-              <li><strong>Enterprise Security:</strong> Implemented GDPR/DPDP consent flows, breach detection services, and SPF/DKIM/DMARC email authentication.</li>
+              <li><strong>Backend &amp; Microservices:</strong> Built high-throughput REST APIs using FastAPI, Flask, Node.js/Express, Redis queues, and event streams.</li>
+              <li><strong>Modern Frontend:</strong> Designed responsive admin dashboards and user interfaces using React, Next.js, Redux,.</li>
+              <li><strong>Enterprise Security:</strong> Implemented GDPR/DPDP consent flows, breach detection services, and SMTP email .</li>
             </ul>
 
             <div className="about-resume-box">
@@ -108,4 +108,4 @@ function About({ onOpenResume }) {
 }
 
 export default About;
-
+

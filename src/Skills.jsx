@@ -1,13 +1,13 @@
 // src/components/Skills.jsx
 import React, { useState } from 'react';
-import { 
-  Code2, 
-  Layers, 
-  Database, 
-  Cpu, 
-  Wrench, 
-  Brain, 
-  ShieldCheck, 
+import {
+  Code2,
+  Layers,
+  Database,
+  Cpu,
+  Wrench,
+  Brain,
+  ShieldCheck,
   Sparkles,
   Search,
   Filter
@@ -116,7 +116,7 @@ export default function Skills() {
   return (
     <section id="skills" className="section">
       <div className="section-content">
-        <p className="section-eyebrow mono">// 02 tech-stack</p>
+        <p className="section-eyebrow mono"><Sparkles size={14} /> tech-stack</p>
         <h2 className="section-title">Technical Expertise</h2>
 
         <div className="skills-filter-bar">
@@ -138,7 +138,7 @@ export default function Skills() {
             ))}
           </div>
 
-          <div className="skill-search">
+          {/* <div className="skill-search">
             <Search size={16} className="search-icon" />
             <input
               type="text"
@@ -146,7 +146,7 @@ export default function Skills() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="skills-grid">
@@ -159,7 +159,7 @@ export default function Skills() {
                 <h3>{label}</h3>
                 <span className="skill-count mono">{skills.length}</span>
               </div>
-              
+
               <div className="skill-tags">
                 {skills.map((skill, i) => (
                   <span
@@ -176,4 +176,4 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+}

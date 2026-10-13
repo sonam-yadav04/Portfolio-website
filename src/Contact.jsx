@@ -1,16 +1,16 @@
 // src/components/Contact.jsx
 import React, { useState } from 'react';
-import { 
-  Mail, 
-  Github, 
-  Linkedin, 
-  Code2, 
-  MapPin, 
-  Download, 
-  FileText, 
-  CheckCircle2, 
-  Copy, 
-  Sparkles, 
+import {
+  Mail,
+  Github,
+  Linkedin,
+  Code2,
+  MapPin,
+  Download,
+  FileText,
+  CheckCircle2,
+  Copy,
+  Sparkles,
   Send
 } from 'lucide-react';
 import { RESUME_URL } from './App';
@@ -27,7 +27,10 @@ export default function Contact({ onOpenResume }) {
   return (
     <section id="contact" className="section contact-cta">
       <div className="section-content">
-        <p className="section-eyebrow mono">// 06 get-in-touch</p>
+        <div className="section-eyebrow">
+          <Mail size={14} />
+          <span> Get In Touch</span>
+        </div>
         <h2 className="section-title">Let's Build Something Exceptional</h2>
         <p className="contact-subtitle">
           I am currently actively interviewing for <strong>Full Stack Developer</strong> and <strong>GenAI Engineer</strong> roles. Whether you have a position open, a project idea, or simply want to connect, my inbox is always open!
@@ -44,7 +47,7 @@ export default function Contact({ onOpenResume }) {
               <a href="mailto:sonamyadav.ml@gmail.com" className="contact-card-link">
                 Send Email <Send size={14} />
               </a>
-              <button 
+              <button
                 onClick={() => handleCopy('sonamyadav.ml@gmail.com', 'Email')}
                 className="contact-copy-btn"
                 title="Copy Email"
@@ -82,7 +85,7 @@ export default function Contact({ onOpenResume }) {
         <div className="contact-buttons-row">
           <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="btn-solid" download>
             <Download size={18} />
-            <span>Download Official Resume</span>
+            <span>Download Resume</span>
           </a>
           <button onClick={onOpenResume} className="btn-outline">
             <FileText size={18} />
@@ -107,4 +110,4 @@ export default function Contact({ onOpenResume }) {
     </section>
   );
 }
-
+

@@ -1,6 +1,6 @@
 // src/components/Experience.jsx
 import React from "react";
-import { Briefcase, Calendar, MapPin, CheckCircle2, ChevronRight, Building2 } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Sparkles, ChevronRight, Building2 } from "lucide-react";
 
 const experiences = [
   {
@@ -49,7 +49,6 @@ export default function Experience() {
   return (
     <section id="experience" className="section">
       <div className="section-content">
-        <p className="section-eyebrow mono">// 04 experience</p>
         <h2 className="section-title">Work Experience</h2>
 
         <div className="experience-timeline">
@@ -94,4 +93,4 @@ export default function Experience() {
       </div>
     </section>
   );
-}
+}

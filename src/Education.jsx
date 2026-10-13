@@ -6,7 +6,7 @@ export default function Education() {
   return (
     <section id="education" className="section">
       <div className="section-content">
-        <p className="section-eyebrow mono">// 05 education</p>
+
         <h2 className="section-title">Academic Qualifications</h2>
 
         <div className="education-grid">
@@ -24,7 +24,7 @@ export default function Education() {
                   <span><Calendar size={13} /> 2023 – 2025</span>
                   <span><MapPin size={13} /> Indore, M.P.</span>
                 </div>
-                
+
                 <div className="edu-coursework">
                   <span className="course-label mono">Key Focus &amp; Coursework:</span>
                   <div className="course-tags">
@@ -36,7 +36,7 @@ export default function Education() {
                 </div>
               </div>
             </div>
-            
+
             <div className="edu-score-box">
               <div className="education-score">7.48</div>
               <div className="education-score-label mono">CGPA</div>
@@ -80,4 +80,4 @@ export default function Education() {
       </div>
     </section>
   );
-}
+}

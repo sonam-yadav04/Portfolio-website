@@ -1,4 +1,4 @@
-// src/components/Home.jsx
+
 import React, { useState } from 'react';
 import {
   Github,
@@ -11,7 +11,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Copy,
-  ChevronDown
+  ChevronDown,
+  Sparkles
 } from 'lucide-react';
 import { RESUME_URL } from './App';
 import About from './About';
@@ -39,7 +40,7 @@ function Home({ onOpenResume }) {
 
   return (
     <div className="home-page-container">
-      {/* 0. Hero Section */}
+
       <section id="home" className="hero">
         <div className="hero-content">
           <div className="status-badge">
@@ -47,7 +48,8 @@ function Home({ onOpenResume }) {
             <span>Open to Full Stack &amp; GenAI Developer Roles</span>
           </div>
 
-          <p className="section-eyebrow mono">// full stack &amp; genai developer</p>
+          <p className="section-eyebrow mono"><Sparkles size={14} /> full stack &amp; genai developer</p>
+
           <h1 className="hero-title">Sonam Yadav</h1>
           <h2 className="hero-subtitle">
             Full Stack Developer <span className="highlight-text">| Python &middot; FastAPI &middot; React/Next.js &middot; GenAI</span>
@@ -58,14 +60,14 @@ function Home({ onOpenResume }) {
           </p>
 
           <div className="cta-row">
-            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="btn-solid" download>
+            {/* <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="btn-solid" download>
               <Download size={18} />
               <span>Download Resume</span>
             </a>
             <button onClick={onOpenResume} className="btn-outline">
               <FileText size={18} />
               <span>Preview Resume</span>
-            </button>
+            </button> */}
             <button onClick={() => scrollToSection('projects')} className="btn-secondary">
               <span>See Projects</span>
               <ArrowRight size={18} />
@@ -98,8 +100,8 @@ function Home({ onOpenResume }) {
 
           {/* Contact Quick Badges */}
           <div className="contact-links">
-            <button 
-              onClick={() => handleCopy('sonamyadav.ml@gmail.com', 'Email')} 
+            <button
+              onClick={() => handleCopy('sonamyadav.ml@gmail.com', 'Email')}
               className="contact-link contact-btn"
               title="Click to copy email"
             >
@@ -153,7 +155,6 @@ function Home({ onOpenResume }) {
         </div>
       </section>
 
-      {/* Sequential Full Page Sections */}
       <About onOpenResume={onOpenResume} />
       <Skills />
       <Projects />
@@ -165,4 +166,4 @@ function Home({ onOpenResume }) {
 }
 
 export default Home;
-
+
