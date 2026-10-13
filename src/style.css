@@ -67,38 +67,172 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Dynamic Ambient Liquid Background */
+/* ========================================================
+   FULLY ANIMATED DYNAMIC BACKGROUND (Squarespace Inspired)
+   ======================================================== */
 .portfolio {
   min-height: 100vh;
   position: relative;
   background-color: #000000;
-  background-image:
-    radial-gradient(ellipse 90% 65% at 50% -15%, rgba(255, 255, 255, 0.08) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 45% at 85% 35%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 15% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 105%, rgba(255, 255, 255, 0.06) 0%, transparent 65%);
   width: 100%;
-  perspective: 1200px;
   overflow-x: hidden;
-  animation: dynamicMeshDrift 28s ease-in-out infinite alternate;
+}
+
+.animated-background-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background-color: #000000;
+  background: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(255, 255, 255, 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 10% 75%, rgba(255, 255, 255, 0.035) 0%, transparent 60%),
+    #000000;
+  animation: dynamicMeshDrift 24s ease-in-out infinite alternate;
 }
 
 @keyframes dynamicMeshDrift {
   0% {
-    background-position: 0% 0%, 100% 0%, 0% 100%, 50% 100%;
+    background-position: 0% 0%, 100% 0%, 0% 100%;
+    filter: brightness(1);
   }
   50% {
-    background-position: 3% 5%, 97% 8%, 4% 95%, 52% 98%;
+    background-position: 4% 6%, 96% 8%, 5% 95%;
+    filter: brightness(1.15);
   }
   100% {
-    background-position: -3% 2%, 103% -3%, -2% 102%, 48% 102%;
+    background-position: -4% 3%, 104% -4%, -3% 103%;
+    filter: brightness(1);
   }
 }
 
-/* Architectural Perspective Micro-Grid Floor */
-.portfolio::before {
-  content: '';
-  position: fixed;
+.animated-bg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: auto; /* allows mouse tracking for interactive particles */
+}
+
+/* Liquid Morphing Ambient Orbs */
+.liquid-orb {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.28;
+  will-change: transform, border-radius;
+}
+
+.liquid-orb-1 {
+  width: 580px;
+  height: 580px;
+  top: -140px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(212, 212, 216, 0.08) 45%, transparent 70%);
+  animation: liquidMorph1 20s ease-in-out infinite alternate;
+}
+
+.liquid-orb-2 {
+  width: 620px;
+  height: 620px;
+  top: 30%;
+  right: -160px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(161, 161, 170, 0.05) 50%, transparent 70%);
+  animation: liquidMorph2 25s ease-in-out infinite alternate;
+}
+
+.liquid-orb-3 {
+  width: 540px;
+  height: 540px;
+  bottom: -60px;
+  left: 10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(113, 113, 122, 0.06) 45%, transparent 70%);
+  animation: liquidMorph3 22s ease-in-out infinite alternate;
+}
+
+.liquid-orb-4 {
+  width: 440px;
+  height: 440px;
+  top: 55%;
+  left: 45%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 65%);
+  animation: liquidMorph4 18s ease-in-out infinite alternate;
+}
+
+@keyframes liquidMorph1 {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(60px, 50px) rotate(60deg) scale(1.12);
+  }
+  66% {
+    border-radius: 50% 40% 60% 50% / 40% 70% 50% 60%;
+    transform: translate(30px, 90px) rotate(120deg) scale(0.95);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(-30px, 30px) rotate(180deg) scale(1.08);
+  }
+}
+
+@keyframes liquidMorph2 {
+  0% {
+    border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+    transform: translate(-70px, -60px) rotate(-90deg) scale(1.18);
+  }
+  100% {
+    border-radius: 50% 60% 30% 70% / 50% 30% 70% 50%;
+    transform: translate(-30px, 40px) rotate(-180deg) scale(0.92);
+  }
+}
+
+@keyframes liquidMorph3 {
+  0% {
+    border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%;
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    border-radius: 30% 70% 60% 40% / 60% 40% 60% 40%;
+    transform: translate(50px, -40px) scale(1.15) rotate(45deg);
+  }
+  100% {
+    border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%;
+    transform: translate(-40px, -20px) scale(0.94) rotate(-30deg);
+  }
+}
+
+@keyframes liquidMorph4 {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(-50px, 40px) scale(1.2);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(40px, -30px) scale(0.95);
+    opacity: 0.18;
+  }
+}
+
+/* Perspective Grid Floor & Scanning Horizon */
+.grid-floor-scanline {
+  position: absolute;
   top: 0;
   left: -25%;
   width: 150%;
@@ -110,11 +244,11 @@ body {
   transform: perspective(600px) rotateX(60deg) translateY(-40px);
   transform-origin: center top;
   pointer-events: none;
-  z-index: 0;
-  opacity: 0.6;
+  z-index: 1;
+  opacity: 0.65;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 25%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 25%, transparent 75%);
-  animation: gridDrift 30s linear infinite;
+  animation: gridDrift 24s linear infinite;
 }
 
 @keyframes gridDrift {
@@ -126,14 +260,44 @@ body {
   }
 }
 
-/* Subtle Vignette */
-.portfolio::after {
+/* Traveling Scan Beam */
+.grid-floor-scanline::after {
   content: '';
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
+  animation: scanBeam 10s ease-in-out infinite;
   pointer-events: none;
-  z-index: 0;
+}
+
+@keyframes scanBeam {
+  0% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh);
+    opacity: 0;
+  }
+}
+
+/* Atmospheric Volumetric Vignette */
+.animated-background-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 45%, rgba(0, 0, 0, 0.85) 100%);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .mono {
@@ -142,71 +306,6 @@ body {
 
 .display {
   font-family: var(--font-heading);
-}
-
-/* Dynamic Ambient Glow Orbs */
-.ambient-orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.22;
-  will-change: transform;
-}
-
-.orb-1 {
-  width: 540px;
-  height: 540px;
-  top: -120px;
-  left: -100px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(161, 161, 170, 0.05) 50%, transparent 70%);
-  animation: floatOrb1 18s ease-in-out infinite;
-}
-
-.orb-2 {
-  width: 580px;
-  height: 580px;
-  top: 35%;
-  right: -140px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(113, 113, 122, 0.04) 50%, transparent 70%);
-  animation: floatOrb2 22s ease-in-out infinite;
-}
-
-.orb-3 {
-  width: 520px;
-  height: 520px;
-  bottom: 5%;
-  left: 15%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, rgba(161, 161, 170, 0.03) 50%, transparent 70%);
-  animation: floatOrb3 20s ease-in-out infinite;
-}
-
-@keyframes floatOrb1 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translate(50px, 40px) scale(1.15) rotate(45deg);
-  }
-}
-
-@keyframes floatOrb2 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translate(-45px, -50px) scale(1.18) rotate(-45deg);
-  }
-}
-
-@keyframes floatOrb3 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  50% {
-    transform: translate(40px, -35px) scale(0.92) rotate(30deg);
-  }
 }
 
 /* Navigation Header */

@@ -10,6 +10,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import About from './About';
 import Home from './Home';
+import AnimatedBackground from './AnimatedBackground';
 
 export const RESUME_URL = "https://drive.google.com/file/d/1kQliAE82KwvfU1tCWBqbGegH4DE80UFz/view?usp=sharing";
 
@@ -87,10 +88,8 @@ export default function App() {
 
   return (
     <div className="portfolio">
-      {/* Ambient background glowing shapes */}
-      <div className="ambient-orb orb-1"></div>
-      <div className="ambient-orb orb-2"></div>
-      <div className="ambient-orb orb-3"></div>
+      {/* Fully Animated Dynamic Background */}
+      <AnimatedBackground />
 
       <nav className="nav">
         <div className="nav-content">
