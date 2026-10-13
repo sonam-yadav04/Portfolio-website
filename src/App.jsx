@@ -11,7 +11,7 @@ import Projects from './Projects';
 import About from './About';
 import Home from './Home';
 
-export const RESUME_URL = "https://drive.google.com/file/d/1xP_V00TGCugylb2ZX_hPr_SH1-RHK2Cu/view?usp=sharing";
+export const RESUME_URL = "https://drive.google.com/file/d/1kQliAE82KwvfU1tCWBqbGegH4DE80UFz/view?usp=sharing";
 
 const NAV_ITEMS = [
   { id: 'home', path: '/', label: 'Home' },
@@ -74,7 +74,7 @@ export default function App() {
     e.preventDefault();
     setActiveSection(item.id);
     navigate(item.path, { replace: true });
-    
+
     const element = document.getElementById(item.id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -119,22 +119,22 @@ export default function App() {
           </ul>
 
           <div className="nav-actions">
-            <button 
-              onClick={() => setShowResumeModal(true)} 
+            <button
+              onClick={() => setShowResumeModal(true)}
               className="resume-preview-btn"
               title="Preview Resume"
             >
               <Eye size={15} />
               <span>Preview</span>
             </button>
-            <a 
-              href={RESUME_URL} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="resume-btn"
               download
             >
-              <Download size={15} /> 
+              <Download size={15} />
               <span>Resume</span>
             </a>
           </div>
@@ -171,12 +171,11 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating Back to Top Button */}
+
       <button onClick={scrollToTop} className="back-to-top" aria-label="Back to Top">
         <ArrowUp size={18} />
       </button>
 
-      {/* Interactive Resume Modal */}
       {showResumeModal && (
         <div className="modal-backdrop" onClick={() => setShowResumeModal(false)}>
           <div className="modal-content resume-modal" onClick={(e) => e.stopPropagation()}>
@@ -196,18 +195,18 @@ export default function App() {
               <div className="resume-notice">
                 <p>Viewing official Google Drive resume document. You can also download it directly below.</p>
                 <div className="resume-modal-actions">
-                  <a 
-                    href={RESUME_URL} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-solid btn-sm"
                   >
                     <Download size={16} /> Download PDF
                   </a>
-                  <a 
-                    href={RESUME_URL} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={RESUME_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn-outline btn-sm"
                   >
                     <Eye size={16} /> Open in New Tab
@@ -215,8 +214,8 @@ export default function App() {
                 </div>
               </div>
               <div className="resume-iframe-container">
-                <iframe 
-                  src="https://drive.google.com/file/d/1xP_V00TGCugylb2ZX_hPr_SH1-RHK2Cu/preview" 
+                <iframe
+                  src="https://drive.google.com/file/d/1xP_V00TGCugylb2ZX_hPr_SH1-RHK2Cu/preview"
                   title="Sonam Yadav Resume"
                   width="100%"
                   height="600px"
@@ -230,4 +229,4 @@ export default function App() {
     </div>
   );
 }
-
+
