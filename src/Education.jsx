@@ -1,4 +1,4 @@
-// src/components/Education.jsx
+
 import React from "react";
 import { GraduationCap, Award, BookOpen, Calendar, MapPin } from "lucide-react";
 

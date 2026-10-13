@@ -60,21 +60,14 @@ function Home({ onOpenResume }) {
           </p>
 
           <div className="cta-row">
-            {/* <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" className="btn-solid" download>
-              <Download size={18} />
-              <span>Download Resume</span>
-            </a>
-            <button onClick={onOpenResume} className="btn-outline">
-              <FileText size={18} />
-              <span>Preview Resume</span>
-            </button> */}
+
             <button onClick={() => scrollToSection('projects')} className="btn-secondary">
               <span>See Projects</span>
               <ArrowRight size={18} />
             </button>
           </div>
 
-          {/* Quick Highlights / Stats Grid */}
+
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">3+</div>

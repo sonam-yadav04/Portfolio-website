@@ -17,8 +17,8 @@
   --accent-cyan-glow: rgba(249, 115, 22, 0.35);
   --accent-blue: #c2410c;
 
-  --accent-emerald: #10b981;
-  --accent-emerald-glow: rgba(16, 185, 129, 0.2);
+  --accent-emerald: #ff9248;
+  --accent-emerald-glow: rgba(249, 115, 22, 0.25);
 
   --accent-purple: #ea580c;
   --accent-amber: #f59e0b;
@@ -64,7 +64,7 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #0b0705;
-  background-image: 
+  background-image:
     radial-gradient(ellipse 100% 60% at 50% -10%, rgba(234, 88, 12, 0.38) 0%, rgba(154, 52, 18, 0.18) 50%, transparent 75%),
     radial-gradient(ellipse 70% 50% at 90% 28%, rgba(249, 115, 22, 0.24) 0%, transparent 60%),
     radial-gradient(ellipse 70% 50% at 10% 68%, rgba(194, 65, 12, 0.24) 0%, transparent 60%),
@@ -82,7 +82,7 @@ body {
   left: -25%;
   width: 150%;
   height: 100%;
-  background-image: 
+  background-image:
     linear-gradient(rgba(249, 115, 22, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(249, 115, 22, 0.08) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -467,7 +467,7 @@ body {
   font-size: 0.95rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
-  box-shadow: 
+  box-shadow:
     0 6px 18px rgba(234, 88, 12, 0.45),
     inset 0 1px 1px rgba(255, 255, 255, 0.4),
     inset 0 -2px 4px rgba(0, 0, 0, 0.25);
@@ -476,7 +476,7 @@ body {
 
 .btn-solid:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 10px 28px rgba(249, 115, 22, 0.55),
     inset 0 1px 1px rgba(255, 255, 255, 0.65);
 }
@@ -499,7 +499,7 @@ body {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  box-shadow: 
+  box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.3),
     inset 0 1px 1px rgba(255, 255, 255, 0.1);
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -510,7 +510,7 @@ body {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 8px 22px rgba(0, 0, 0, 0.4),
     0 0 15px rgba(249, 115, 22, 0.25);
 }
@@ -531,7 +531,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  box-shadow: 
+  box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.1);
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -573,7 +573,7 @@ body {
   text-align: center;
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
-  box-shadow: 
+  box-shadow:
     0 12px 28px -6px rgba(0, 0, 0, 0.65),
     inset 0 1px 1px rgba(255, 255, 255, 0.18),
     inset 0 -1px 1px rgba(0, 0, 0, 0.3);
@@ -596,7 +596,7 @@ body {
 .stat-card:hover {
   border-color: rgba(249, 115, 22, 0.65);
   transform: translateY(-8px) scale(1.03) rotateX(3deg);
-  box-shadow: 
+  box-shadow:
     0 22px 45px -8px rgba(0, 0, 0, 0.8),
     0 0 25px rgba(249, 115, 22, 0.28),
     inset 0 1px 1px rgba(255, 255, 255, 0.35);
@@ -828,7 +828,9 @@ body {
 
 .about-text-column strong {
   color: var(--text-main);
-}.about-resume-box {
+}
+
+.about-resume-box {
   background: rgba(26, 16, 11, 0.85);
   border: 1px solid var(--border-bright);
   padding: 1.4rem 1.6rem;
@@ -882,7 +884,7 @@ body {
   align-items: flex-start;
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
-  box-shadow: 
+  box-shadow:
     0 12px 28px -6px rgba(0, 0, 0, 0.55),
     inset 0 1px 1px rgba(255, 255, 255, 0.16);
   position: relative;
@@ -893,7 +895,7 @@ body {
   border-color: rgba(249, 115, 22, 0.65);
   transform: translateX(6px) translateY(-4px) scale(1.02);
   background: linear-gradient(145deg, rgba(38, 24, 18, 0.88) 0%, rgba(22, 14, 10, 0.96) 100%);
-  box-shadow: 
+  box-shadow:
     0 20px 42px -8px rgba(0, 0, 0, 0.75),
     0 0 25px rgba(249, 115, 22, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
@@ -968,7 +970,9 @@ body {
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
-}.filter-tab {
+}
+
+.filter-tab {
   background: rgba(26, 16, 11, 0.7);
   border: 1px solid var(--panel-border);
   color: var(--text-muted);
@@ -1037,7 +1041,7 @@ body {
   border-radius: 16px;
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
-  box-shadow: 
+  box-shadow:
     0 12px 28px -6px rgba(0, 0, 0, 0.65),
     inset 0 1px 1px rgba(255, 255, 255, 0.16);
   position: relative;
@@ -1059,7 +1063,7 @@ body {
 .skill-category-card:hover {
   border-color: rgba(249, 115, 22, 0.65);
   transform: translateY(-7px) scale(1.02) rotateX(2deg);
-  box-shadow: 
+  box-shadow:
     0 22px 45px -8px rgba(0, 0, 0, 0.8),
     0 0 25px rgba(249, 115, 22, 0.28),
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
@@ -1281,9 +1285,9 @@ body {
 }
 
 .exp-tag {
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(249, 115, 22, 0.12);
   color: var(--accent-cyan);
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(249, 115, 22, 0.3);
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.78rem;
@@ -1300,7 +1304,7 @@ body {
 }
 
 .project-tab {
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(26, 16, 11, 0.7);
   border: 1px solid var(--panel-border);
   color: var(--text-muted);
   padding: 0.6rem 1.4rem;
@@ -1317,7 +1321,7 @@ body {
 }
 
 .project-tab.active {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(2, 132, 199, 0.15));
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.22), rgba(194, 65, 12, 0.18));
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   font-weight: 600;
@@ -1330,8 +1334,8 @@ body {
 }
 
 .project-card {
-  background: linear-gradient(145deg, rgba(20, 28, 54, 0.75) 0%, rgba(10, 16, 32, 0.9) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(30, 20, 15, 0.78) 0%, rgba(18, 11, 8, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 2.2rem;
   border-radius: 18px;
   display: flex;
@@ -1359,7 +1363,7 @@ body {
 }
 
 .project-card.highlight {
-  border-color: rgba(56, 189, 248, 0.45);
+  border-color: rgba(249, 115, 22, 0.45);
   box-shadow:
     0 18px 40px -8px rgba(0, 0, 0, 0.7),
     0 0 25px rgba(56, 189, 248, 0.15),
@@ -1367,7 +1371,7 @@ body {
 }
 
 .project-card:hover {
-  border-color: rgba(56, 189, 248, 0.65);
+  border-color: rgba(249, 115, 22, 0.7);
   transform: translateY(-9px) scale(1.02) rotateX(2deg);
   box-shadow:
     0 26px 52px -10px rgba(0, 0, 0, 0.8),
@@ -1384,12 +1388,12 @@ body {
 }
 
 .project-badge {
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(249, 115, 22, 0.15);
   color: var(--accent-cyan);
   padding: 0.3rem 0.8rem;
   border-radius: 12px;
   font-size: 0.75rem;
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
 .project-card h3 {
@@ -1602,8 +1606,8 @@ body {
 }
 
 .education-card {
-  background: linear-gradient(145deg, rgba(20, 28, 54, 0.72) 0%, rgba(10, 16, 32, 0.88) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(30, 20, 15, 0.78) 0%, rgba(18, 11, 8, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 2.2rem;
   border-radius: 18px;
   display: flex;
@@ -1620,7 +1624,7 @@ body {
 }
 
 .featured-edu {
-  border-color: rgba(56, 189, 248, 0.4);
+  border-color: rgba(249, 115, 22, 0.45);
   box-shadow:
     0 16px 36px -6px rgba(0, 0, 0, 0.7),
     0 0 25px rgba(56, 189, 248, 0.15),
@@ -1628,7 +1632,7 @@ body {
 }
 
 .education-card:hover {
-  border-color: rgba(56, 189, 248, 0.65);
+  border-color: rgba(249, 115, 22, 0.7);
   transform: translateY(-6px) scale(1.015);
   box-shadow:
     0 24px 48px -8px rgba(0, 0, 0, 0.75),
@@ -1646,7 +1650,7 @@ body {
   width: 54px;
   height: 54px;
   border-radius: 14px;
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(249, 115, 22, 0.15);
   color: var(--accent-cyan);
   display: flex;
   align-items: center;
@@ -1655,7 +1659,7 @@ body {
 }
 
 .edu-badge-icon.secondary {
-  background: rgba(168, 85, 247, 0.12);
+  background: rgba(234, 88, 12, 0.15);
   color: var(--accent-purple);
 }
 
@@ -1771,7 +1775,7 @@ body {
 }
 
 .contact-card {
-  background: linear-gradient(145deg, rgba(20, 28, 54, 0.82) 0%, rgba(10, 15, 30, 0.94) 100%);
+  background: linear-gradient(145deg, rgba(30, 20, 15, 0.82) 0%, rgba(18, 11, 8, 0.94) 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 2.2rem 1.4rem;
   border-radius: 20px;
@@ -1785,7 +1789,7 @@ body {
     0 16px 36px -8px rgba(0, 0, 0, 0.7),
     0 4px 12px rgba(0, 0, 0, 0.5),
     inset 0 1px 1px rgba(255, 255, 255, 0.22),
-    inset 0 0 25px rgba(56, 189, 248, 0.04);
+    inset 0 0 25px rgba(249, 115, 22, 0.04);
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(16px);
@@ -1808,18 +1812,18 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15), transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(249, 115, 22, 0.18), transparent 70%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
 
 .contact-card:hover {
-  border-color: rgba(56, 189, 248, 0.7);
+  border-color: rgba(249, 115, 22, 0.7);
   transform: translateY(-10px) scale(1.03) rotateX(3deg);
   box-shadow:
     0 30px 60px -12px rgba(0, 0, 0, 0.85),
-    0 0 35px rgba(56, 189, 248, 0.3),
+    0 0 35px rgba(249, 115, 22, 0.35),
     inset 0 1px 2px rgba(255, 255, 255, 0.45);
 }
 
@@ -1837,15 +1841,15 @@ body {
   width: 58px;
   height: 58px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.22) 0%, rgba(14, 165, 233, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.25) 0%, rgba(194, 65, 12, 0.1) 100%);
   color: var(--accent-cyan);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  border: 1px solid rgba(249, 115, 22, 0.45);
   box-shadow:
-    0 10px 25px -4px rgba(56, 189, 248, 0.35),
+    0 10px 25px -4px rgba(249, 115, 22, 0.35),
     inset 0 1px 2px rgba(255, 255, 255, 0.4),
     inset 0 -2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1855,8 +1859,8 @@ body {
 .contact-card:hover .contact-card-icon {
   transform: translateZ(35px) scale(1.15) rotate(6deg);
   box-shadow:
-    0 15px 30px rgba(56, 189, 248, 0.5),
-    0 0 20px rgba(56, 189, 248, 0.3),
+    0 15px 30px rgba(249, 115, 22, 0.55),
+    0 0 20px rgba(249, 115, 22, 0.35),
     inset 0 1px 2px rgba(255, 255, 255, 0.6);
 }
 
