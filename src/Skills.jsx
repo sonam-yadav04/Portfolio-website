@@ -1,4 +1,4 @@
-// src/components/Skills.jsx
+
 import React, { useState } from 'react';
 import {
   Code2,
