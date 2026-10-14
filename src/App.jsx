@@ -27,14 +27,18 @@ const NAV_ITEMS = [
 ];
 
 export default function App() {
+  useSiteEffects();
   const [showResumeModal, setShowResumeModal] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   // Scroll section handling & Active section observer
   useEffect(() => {
     const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+
       const sections = NAV_ITEMS.map((item) => document.getElementById(item.id)).filter(Boolean);
       const scrollPosition = window.scrollY + 200;
 
@@ -48,6 +52,7 @@ export default function App() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -94,17 +99,7 @@ export default function App() {
       <AnimatedBackground />
 
       <nav className="nav">
-        <div className="nav-content">
-          <a href="#home" onClick={(e) => handleNavClick(e, NAV_ITEMS[0])} className="nav-brand">
-            <div className="nav-avatar">
-              <img src={`${import.meta.env.BASE_URL}profile2.jpeg`} alt="Sonam Yadav" />
-            </div>
-            <div className="nav-brand-text">
-              <span className="nav-logo">Sonam <span>Yadav</span></span>
-              <span className="nav-tagline mono">Full Stack &amp; GenAI Dev</span>
-            </div>
-          </a>
-
+        <div className="nav-content centered-nav">
           <ul className="nav-links">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
@@ -173,7 +168,12 @@ export default function App() {
       </footer>
 
 
-      <button onClick={scrollToTop} className="back-to-top" aria-label="Back to Top">
+      <button
+        onClick={scrollToTop}
+        className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
+        aria-label="Back to Top"
+        title="Back to Top"
+      >
         <ArrowUp size={18} />
       </button>
 

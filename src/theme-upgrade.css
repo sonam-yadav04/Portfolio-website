@@ -107,18 +107,13 @@ body, .portfolio { background-color: var(--bg-dark); }
   background: rgba(5, 6, 15, 0.7);
   border-bottom: 1px solid rgba(148, 163, 255, 0.12);
 }
-.nav-avatar {
-  border: 2px solid transparent;
-  background: linear-gradient(#05060f, #05060f) padding-box, var(--grad) border-box;
-  box-shadow: 0 0 18px rgba(167, 139, 250, 0.35);
+.nav-content.centered-nav {
+  justify-content: center;
+  gap: 2rem;
 }
-.nav-logo span {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.nav-links {
+  margin: 0;
 }
-.nav-tagline { color: var(--text-dim); }
 .nav-link:hover { color: #fff; background: rgba(167, 139, 250, 0.1); }
 .nav-link.active {
   color: #ede9fe;
@@ -138,8 +133,7 @@ body, .portfolio { background-color: var(--bg-dark); }
    BUTTONS (gradient + light sheen on hover)
    -------------------------------------------------------------------------- */
 .btn-solid,
-.resume-btn,
-.back-to-top {
+.resume-btn {
   position: relative;
   overflow: hidden;
   background: var(--grad);
@@ -148,8 +142,7 @@ body, .portfolio { background-color: var(--bg-dark); }
   box-shadow: 0 8px 24px rgba(124, 92, 255, 0.35);
 }
 .btn-solid:hover,
-.resume-btn:hover,
-.back-to-top:hover {
+.resume-btn:hover {
   background: var(--grad);
   color: #070a16;
   border-color: transparent;
@@ -172,6 +165,44 @@ body, .portfolio { background-color: var(--bg-dark); }
 .btn-solid:hover::after,
 .resume-btn:hover::after { left: 140%; }
 
+/* Floating Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #070a16;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(124, 92, 255, 0.35);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--grad);
+  color: #070a16;
+  border-color: transparent;
+  filter: brightness(1.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.45);
+}
+
 .btn-outline,
 .btn-secondary {
   border-color: rgba(167, 139, 250, 0.4);
@@ -184,9 +215,226 @@ body, .portfolio { background-color: var(--bg-dark); }
   box-shadow: 0 8px 24px rgba(124, 92, 255, 0.25);
 }
 
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
+  text-align: left;
+}
+
+.hero-intro-col {
+  flex: 1 1 58%;
+  max-width: 660px;
+  text-align: left;
+}
+
+.hero-intro-col .status-badge {
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+}
+
+.hero-intro-col .section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  justify-content: flex-start;
+}
+
+.hero-intro-col .hero-title {
+  font-size: clamp(2.5rem, 4.2vw, 4.2rem);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.hero-intro-col .type-wrap {
+  justify-items: start;
+}
+
+.hero-intro-col .hero-subtitle {
+  font-size: clamp(1.2rem, 1.9vw, 1.6rem);
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.hero-intro-col .hero-description {
+  margin: 0 0 2rem 0;
+  max-width: 620px;
+  text-align: left;
+}
+
+.hero-intro-col .cta-row {
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.hero-intro-col .contact-links {
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+.hero-profile-col {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* --------------------------------------------------------------------------
-   HERO
+   ORGANIC WAVY PROFILE PHOTO (Solid Background, Stable Elegance)
    -------------------------------------------------------------------------- */
+.hero-organic-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-organic-badge {
+  position: relative;
+  width: 370px;
+  height: 370px;
+  display: block;
+  filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 20px rgba(167, 139, 250, 0.16));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.hero-organic-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.hero-organic-photo {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center center;
+}
+
+.hero-organic-border {
+  transition: stroke 0.3s ease;
+}
+
+.hero-organic-container:hover .hero-organic-badge {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 26px 50px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 28px rgba(167, 139, 250, 0.3));
+}
+
+.hero-organic-container:hover .hero-organic-border {
+  stroke: rgba(167, 139, 250, 0.85);
+}
+
+.hero-organic-container:hover .hero-organic-photo {
+  transform: scale(1.04);
+}
+
+.hero-profile-pill {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(14, 18, 36, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  border-radius: 9999px;
+  padding: 0.45rem 1.05rem;
+  color: #ede9fe;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-organic-container:hover .hero-profile-pill {
+  transform: translateY(-2px);
+  border-color: rgba(167, 139, 250, 0.75);
+}
+
+.hero-profile-pill .pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+  animation: dotPing 2s infinite;
+}
+
+/* Responsive Media Queries for Hero Top Row */
+@media screen and (max-width: 1100px) {
+  .hero-top-row {
+    gap: 2.5rem;
+  }
+  .hero-organic-badge {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-top-row {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2.75rem;
+  }
+  .hero-intro-col {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-intro-col .status-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-intro-col .section-eyebrow {
+    justify-content: center;
+  }
+  .hero-intro-col .hero-title,
+  .hero-intro-col .hero-subtitle {
+    text-align: center;
+  }
+  .hero-intro-col .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-intro-col .cta-row {
+    justify-content: center;
+  }
+  .hero-intro-col .contact-links {
+    justify-content: center;
+  }
+  .hero-organic-badge {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-organic-badge {
+    width: 250px;
+    height: 250px;
+  }
+  .hero-profile-pill {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.8rem;
+    bottom: 4px;
+    right: 4px;
+  }
+}
+
+
 .status-badge {
   background: rgba(52, 211, 153, 0.08);
   border-color: rgba(52, 211, 153, 0.35);
@@ -465,6 +713,19 @@ body, .portfolio { background-color: var(--bg-dark); }
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-content.centered-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+  }
+  .nav-links {
+    justify-content: center;
+  }
 }
 
 /* respect users who prefer less motion */
