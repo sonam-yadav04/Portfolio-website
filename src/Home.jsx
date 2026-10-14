@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Github,
@@ -21,6 +20,7 @@ import Projects from './Projects';
 import Experience from './Experience';
 import Education from './Education';
 import Contact from './Contact';
+import { HeroGreeting, RoleTyper } from './TypingText';
 
 function Home({ onOpenResume }) {
   const [copiedText, setCopiedText] = useState('');
@@ -50,9 +50,9 @@ function Home({ onOpenResume }) {
 
           <p className="section-eyebrow mono"><Sparkles size={14} /> full stack &amp; genai developer</p>
 
-          <h1 className="hero-title">Sonam Yadav</h1>
+          <HeroGreeting />
           <h2 className="hero-subtitle">
-            Full Stack Developer <span className="highlight-text">| Python &middot; FastAPI &middot; React/Next.js &middot; GenAI</span>
+            I&apos;m a <RoleTyper />
           </h2>
 
           <p className="hero-description">
@@ -159,4 +159,3 @@ function Home({ onOpenResume }) {
 }
 
 export default Home;
-
