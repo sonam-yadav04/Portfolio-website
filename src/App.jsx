@@ -14,7 +14,7 @@ import About from './About';
 import Home from './Home';
 import AnimatedBackground from './AnimatedBackground';
 
-export const RESUME_URL = "https://drive.google.com/file/d/1kQliAE82KwvfU1tCWBqbGegH4DE80UFz/view?usp=sharing";
+export const RESUME_URL = "https://drive.google.com/file/d/16ncAc7ymJq4Y4nFFKyikTKTe9873mL_H/view?usp=sharing";
 
 const NAV_ITEMS = [
   { id: 'home', path: '/', label: 'Home' },
