@@ -3,6 +3,8 @@ import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { FileText, Download, Eye, X, ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 import './style.css';
+import './theme-upgrade.css';
+import useSiteEffects from './useSiteEffects';
 import Experience from './Experience';
 import Education from './Education';
 import Contact from './Contact';
@@ -214,7 +216,7 @@ export default function App() {
               </div>
               <div className="resume-iframe-container">
                 <iframe
-                  src="https://drive.google.com/file/d/1xP_V00TGCugylb2ZX_hPr_SH1-RHK2Cu/preview"
+                  src={RESUME_URL}
                   title="Sonam Yadav Resume"
                   width="100%"
                   height="600px"
