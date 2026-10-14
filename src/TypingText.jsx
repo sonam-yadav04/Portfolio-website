@@ -80,7 +80,7 @@ export function HeroGreeting() {
   return (
     <h1 className="hero-title" aria-label="Hi, I'm Sonam Yadav">
       <span className="type-wrap" aria-hidden="true">
-        {/* invisible full text reserves the width so nothing jumps while typing */}
+
         <span className="type-sizer">
           {GREETING}Sonam<span className="wave">👋</span>
         </span>
