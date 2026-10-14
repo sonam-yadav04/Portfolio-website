@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-/**
- * Tiny typewriter hook. Types each phrase, optionally deletes it and moves on.
- * Pass a stable array (define it outside the component).
- */
 function useTypewriter(
   phrases,
   { typeSpeed = 70, deleteSpeed = 35, hold = 1600, startDelay = 400, loop = true } = {}
@@ -71,7 +67,7 @@ const ROLES = [
   'Problem Solver',
 ];
 
-/** Hero headline: types "Hi, I'm Sonam" once, then waves. */
+
 export function HeroGreeting() {
   const { text, done } = useTypewriter(GREETING_PHRASES, {
     loop: false,
@@ -99,13 +95,13 @@ export function HeroGreeting() {
   );
 }
 
-/** Rotating role line: "I'm a Full Stack Developer" */
+
 export function RoleTyper() {
   const { text } = useTypewriter(ROLES, {
     typeSpeed: 55,
     deleteSpeed: 28,
     hold: 1500,
-    startDelay: 2600, // starts after the greeting has finished
+    startDelay: 2600,
   });
 
   return (

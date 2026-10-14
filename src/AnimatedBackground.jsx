@@ -9,7 +9,7 @@ const wave = (height, amplitude) => {
   return `${path} V0 H0 Z`;
 };
 
-// front wave is the most solid; the ones behind are fainter and slower
+
 const LAYERS = [
   { h: 262, a: 46, opacity: 0.4, dur: 34, rev: false, delay: 0 },
   { h: 292, a: 58, opacity: 0.24, dur: 46, rev: true, delay: -9 },
