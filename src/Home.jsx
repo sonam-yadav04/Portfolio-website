@@ -146,7 +146,7 @@ function Home({ onOpenResume }) {
                     {/* Profile Photo Clipped to Organic Wavy Shape */}
                     <g clipPath="url(#organicWaveClip)">
                       <image
-                        href={`${import.meta.env.BASE_URL}profile2.jpeg`}
+                        href={`${import.meta.env.BASE_URL}profile.png`}
                         x="12"
                         y="4"
                         width="376"
